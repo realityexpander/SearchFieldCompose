@@ -1,4 +1,4 @@
-package com.plcoding.searchfieldcompose
+package com.realityexpander.searchfieldcompose
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -19,13 +19,15 @@ class MainViewModel: ViewModel() {
     val persons = searchText
         .debounce(1000L)
         .onEach { _isSearching.update { true } }
-        .combine(_persons) { text, persons ->
-            if(text.isBlank()) {
-                persons
+        .combine(_persons) { searchText, _persons ->
+            if(searchText.isBlank()) {
+                _persons
             } else {
-                delay(2000L)
-                persons.filter {
-                    it.doesMatchSearchQuery(text)
+                // Simulate network request
+                delay(1000L)
+
+                _persons.filter {
+                    it.doesMatchSearchQuery(searchText)
                 }
             }
         }
@@ -33,7 +35,7 @@ class MainViewModel: ViewModel() {
         .stateIn(
             viewModelScope,
             SharingStarted.WhileSubscribed(5000),
-            _persons.value
+            initialValue = _persons.value
         )
 
     fun onSearchTextChange(text: String) {

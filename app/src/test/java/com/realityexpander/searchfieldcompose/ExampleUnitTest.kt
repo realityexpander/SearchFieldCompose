@@ -1,4 +1,4 @@
-package com.plcoding.searchfieldcompose
+package com.realityexpander.searchfieldcompose
 
 import org.junit.Test
 

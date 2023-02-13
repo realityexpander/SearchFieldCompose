@@ -1,4 +1,4 @@
-package com.plcoding.searchfieldcompose.ui.theme
+package com.realityexpander.searchfieldcompose.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

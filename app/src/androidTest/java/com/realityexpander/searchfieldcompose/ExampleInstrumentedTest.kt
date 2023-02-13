@@ -1,4 +1,4 @@
-package com.plcoding.searchfieldcompose
+package com.realityexpander.searchfieldcompose
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

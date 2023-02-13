@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.plcoding.searchfieldcompose'
+    namespace 'com.realityexpander.searchfieldcompose'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.plcoding.searchfieldcompose"
+        applicationId "com.realityexpander.searchfieldcompose"
         minSdk 24
         targetSdk 33
         versionCode 1
